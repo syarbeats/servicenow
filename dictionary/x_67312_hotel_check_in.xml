@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Check-in" max_length="40" name="x_67312_hotel_check_in" type="collection">
+        <element label="Comments" max_length="500" name="comments" type="string"/>
+        <element dynamic_creation="true" label="Guest" max_length="32" name="guest" reference="x_67312_hotel_guest" reference_qual="user_nameSAMEASuser_name^EQ" reference_qual_condition="user_nameSAMEASuser_name^EQ" type="reference"/>
+        <element label="Room" max_length="32" name="room" reference="x_67312_hotel_room" reference_qual="numberSAMEASnumber^EQ" reference_qual_condition="numberSAMEASnumber^EQ" type="reference"/>
+        <index name="index">
+            <element name="guest"/>
+        </index>
+        <index name="index2">
+            <element name="room"/>
+        </index>
+    </element>
+</database>
